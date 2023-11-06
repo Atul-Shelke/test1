@@ -1,0 +1,78 @@
+
+   <div class="container"> 
+    <div class="row ">
+       <div class="col-md-4"> </div>
+       <div class="col">
+  <div class="seatStructure">
+  
+    
+  <table id="seatsBlock ">
+   <p id="notification"></p>
+    <tr>
+      <td colspan="10"><div class="screen">SCREEN</div></td>
+      <td rowspan="20">
+        <div class="smallBox greenBox">Selected Seat</div> <br/>
+        <div class="smallBox emptyBox">Empty Seat</div><br/>
+      </td>
+      
+      <br/>
+    </tr>
+    
+   
+  <!-- <ng-container *ngFor="let item of data; let i = index">
+    <tr *ngIf="i % 10 === 0">
+      <ng-container *ngFor="let j of [0, 1, 2, 3, 4,5,6,7,8,9]">
+        <td>
+          <input type="checkbox" [disabled]="data[i + j]?.isbook" (change)="handleChange($event,item.id)" value="{{data[i + j]?.id}}">
+        </td>
+      </ng-container>
+    </tr>
+  </ng-container> -->
+     
+
+  <!-- <tr *ngFor="let item of data; let i = index">
+    <div class="form-check">
+    <td rowspan="5"><input type="checkbox" [disabled]="item.isbook" (change)="handleChange($event,item.id)" value="{{item.id}}"></td>
+    </div>
+</tr>
+     -->
+
+     <tr *ngFor="let item of data; let i = index" >
+        
+        <td rowspan="2">
+     <div class="form-check">
+        <input class="form-check-input" type="checkbox"  [disabled]="item.isbook" (change)="handleChange($event,item.id)" value="{{item.id}}" id="flexCheckIndeterminate{{i}}">
+        
+      </div>
+    </td>
+    
+    </tr>
+  </table>
+    
+  <br/><button class="btn btn-primary">Confirm Selection</button>
+ 
+  </div>
+        
+  <br/><br/>
+  
+  <div class="displayerBoxes">
+ 
+    <table class="Displaytable">
+    <tr>
+      <th>Name</th>
+      <th>Number of Seats</th>
+      <th>Total Price</th>
+    </tr>
+    <tr>
+      <td><textarea id="nameDisplay">{{userName}}</textarea></td>
+      <td><textarea id="NumberDisplay">{{seatno}}</textarea></td>
+      <td><textarea id="seatsDisplay">{{totalprice}}</textarea></td>
+    </tr>
+  </table>
+ 
+  </div>
+</div>
+</div>
+</div>
+
+

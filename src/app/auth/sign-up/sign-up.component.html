@@ -1,0 +1,41 @@
+<div class="container-fluid ">
+    <form class="login" [formGroup]="registerForm">
+        <h2>Welcome, User!</h2>
+        <p>Create a new account</p>
+        <div>
+        <input type="email" placeholder="Email" formControlName="email"/>
+        <div *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched" class="validatedText">
+            Email is required
+          </div>
+          <div *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched" class="validatedText">
+            Please enter a valid email address
+          </div>
+         </div>
+
+         <div>
+        <input type="password" placeholder="Password" formControlName="password"/>
+        <div *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched" class="validatedText">
+            Password is required.
+          </div>
+          <div *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').touched" class="validatedText">
+            Password must be at least 8 characters long.
+          </div>
+          <div *ngIf="registerForm.get('password').hasError('pattern') && registerForm.get('password').touched" class="validatedText">
+            Password must include at least one lowercase letter, one uppercase letter, one digit, and one special character.
+          </div>
+           </div>
+
+           <div>
+            <input type="text" placeholder="User Name" formControlName="username"/>
+            <div *ngIf="registerForm.get('username').hasError('required') && registerForm.get('username').touched" class="validatedText">
+                UserName is required
+              </div>
+             </div>
+        <input type="submit" value="Sign Up" (click)="onSubmit()" />
+        <div class="links">
+          <a >Already have an account ?</a>
+          <span [routerLink]="['/auth']" ><a >Login</a> </span>
+        </div>
+      </form>
+
+</div>

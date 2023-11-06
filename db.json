@@ -1,0 +1,70 @@
+{
+  "signup": [
+    {
+      "email": "atul@gmail.com",
+      "password": "Aaser@123",
+      "username": "atul",
+      "id": 2
+    },
+    {
+      "email": "balkrishna@gmail.com",
+      "password": "Bal@1234",
+      "username": "balkrishna",
+      "id": 3
+    },
+    {
+      "email": "virat@gmail.com",
+      "password": "Virat@123",
+      "username": "virat",
+      "id": 4
+    },
+    {
+      "email": "kl@gmail.com",
+      "password": "Rahul@123",
+      "username": "rahul",
+      "id": 5
+    }
+  ],
+  "booking": [
+    {
+      "isbook": false,
+      "id": 1
+    },
+    {
+      "isbook": false,
+      "id": 2
+    },
+    {
+      "isbook": false,
+      "id": 3
+    },
+    {
+      "isbook": false,
+      "id": 4
+    },
+    {
+      "isbook": false,
+      "id": 5
+    },
+    {
+      "isbook": false,
+      "id": 6
+    },
+    {
+      "isbook": false,
+      "id": 7
+    },
+    {
+      "isbook": false,
+      "id": 8
+    },
+    {
+      "isbook": false,
+      "id": 9
+    },
+    {
+      "isbook": false,
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<div class="container-fluid ">
+    <form class="login" [formGroup]="loginForm">
+        <h2>Welcome, User!</h2>
+        <p>Please log in</p>
+        <div>
+        <input type="text" placeholder="Email" formControlName="email" />
+
+        <div *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched" class="validatedText">
+          Email is required
+        </div>
+        <div *ngIf="loginForm.get('email').hasError('email') && loginForm.get('email').touched" class="validatedText">
+          Please enter a valid email address
+        </div>
+         </div>
+
+         <div>
+        <input type="password" placeholder="Password" formControlName="password" />
+        <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched" class="validatedText">
+          Password is required.
+        </div>
+        <div *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched" class="validatedText">
+          Password must be at least 8 characters long.
+        </div>
+        <div *ngIf="loginForm.get('password').hasError('pattern') && loginForm.get('password').touched" class="validatedText">
+          Password must include at least one lowercase letter, one uppercase letter, one digit, and one special character.
+        </div>
+           </div>
+        <input type="submit" [disabled]="loginForm.invalid" value="Log In" (click)="onClick()" />
+        <div class="links">
+          <a href="#">Create New Account</a>
+          <span [routerLink]="['/auth/sign-up']" ><a >Register</a> </span>
+        </div>
+      </form>
+
+</div>
+
